@@ -1,12 +1,14 @@
 //
 //  AppDelegate.m
-//  MultipleMaps
+//  MultiMap
 //
-//  Created by dev on 2018/8/10.
+//  Created by dev on 2018/7/31.
 //  Copyright © 2018年 dev. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import <AMapFoundationKit/AMapFoundationKit.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +19,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    ViewController *rootVC = [[ViewController alloc] init];
+    UINavigationController *rootNavCtl = [[UINavigationController alloc] initWithRootViewController:rootVC];
+    
+    self.window.rootViewController = rootNavCtl;
+    
+    [self configureAPIKey];
+    
     return YES;
 }
 
@@ -47,5 +57,16 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark - AMap Config Methods
 
+- (void)configureAPIKey {
+    if (0 == [APIKey length]) {
+        NSString *reason = [NSString stringWithFormat:@"apiKey为空，请检查key是否正确设置。"];
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:reason delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
+    
+    [AMapServices sharedServices].apiKey = (NSString *)APIKey;
+}
 @end
