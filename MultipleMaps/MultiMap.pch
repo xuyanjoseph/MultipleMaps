@@ -1,0 +1,118 @@
+//
+//  MultiMap.pch
+//  MultiMap
+//
+//  Created by dev on 2018/7/31.
+//  Copyright © 2018年 dev. All rights reserved.
+//
+
+#ifndef MultiMap_pch
+#define MultiMap_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <UIKit/UIKit.h>
+
+#define SCREEN_FRAME ([UIScreen mainScreen].bounds)
+#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+#define kStatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
+#define kNavBarHeight 44.0
+#define kTabBarHeight ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
+#define kTopHeight (kStatusBarHeight + kNavBarHeight)
+#define COLOR_WITH_HEX(hexValue) [UIColor colorWithRed:((float)((hexValue & 0xFF0000) >> 16)) / 255.0 green:((float)((hexValue & 0xFF00) >> 8)) / 255.0 blue:((float)(hexValue & 0xFF)) / 255.0 alpha:1.0f]
+
+#define SERVER_AUTH @"http://beidou.kcnzq.net:2100"
+#define SERVER_FILE @"http://beidou.kcnzq.net:2300"
+#define SERVER_APP @"http://beidou.kcnzq.net:2200"
+#define SERVER_STROKE @"http://beidou.kcnzq.net:2300"
+
+#define GLOBAL_DB @"BeiDouDvrDB.sqlite"
+
+#define TABLE_TRIP @"beidouDVR_Trip"
+#define TABLE_RAW @"beidouDVR_Raw"
+
+static NSString * const httpContTypeKey = @"Content-Type";
+static NSString * const httpContTypeVal = @"application/x-www-form-urlencoded";
+static NSString * const commonSerHeader = @"http://strokeserver";
+
+static NSString * const locTokenKey = @"UBI_Token";
+static NSString * const locIdKey = @"UBI_UserId";
+static NSString * const locCarPlaKey = @"UBI_Car_Plate_Number";
+static NSString * const locCarVinKey = @"UBI_Car_VIN";
+static NSString * const locTimeZoneKey = @"UBI_Time_Zone";
+static NSString * const locTypeKey = @"UBI_User_Type";
+static NSString * const locPhoneKey = @"UBI_Phone";
+
+static NSString * const hostTimeKey = @"setHostTime";
+
+static NSString * const acceConfKey = @"harsh_acce_config";
+static NSString * const deceConfKey = @"harsh_dece_config";
+static NSString * const turnConfKey = @"harsh_turn_config";
+static NSString * const devInfoKey = @"devInfoArr";
+static NSString * const wifiSuffix = @"?WiFi";
+static NSString * const devWfPrefix = @"168PRO";//@"168CarDVR";
+static NSString * const defDevHolderId = @"UBI01234567";
+static NSString * const cwCpyRgtDeclaration = @"Copyright©2018 ChainwayTSP. All Rights Reserved.";
+
+static NSString * const logOutNoteName = @"willLogOut";
+
+static NSString * const navBarBeginColHex = @"#03acfa";
+static NSString * const navBarEndColHex = @"#558bfe";
+
+static NSString * const tokenInvalidFlag = @"请求超时, 请重新登录!";
+static NSString * const tokenErrorFlag = @"请求超时, 请重新登录!";
+
+static NSString * const firmwareSuffix = @"?firmware";
+static NSString * const newVerSuffix = @"NewVer";
+static NSString * const md5SignKey = @"MD5SignKey";
+
+static float const allowedMinZoomLevel = 4;
+static float const allowedMaxZoomLevel = 21;
+
+static float const AMap_allowedMinZoomLevel = 3;
+static float const AMap_allowedMaxZoomLevel = 20;
+
+static NSString * const deviceIdKey = @"device_id";
+static NSString * const deviceVerKey = @"device_version";
+static NSString * const userIdKey = @"user_id";
+static NSString * const carPlaNumKey = @"car_plate_number";
+static NSString * const carVinKey = @"car_vin";
+static NSString * const datSecListKey = @"data_section_list";
+static NSString * const tripIdKey = @"trip_id";
+static NSString * const staTimKey = @"start_time";
+static NSString * const staLonKey = @"start_longitude";
+static NSString * const staLatKey = @"start_latitude";
+static NSString * const firLocTimKey = @"first_location_time";
+static NSString * const firLocLonKey = @"first_location_longitude";
+static NSString * const firLocLatKey = @"first_location_latitude";
+static NSString * const lasLocTimKey = @"last_location_time";
+static NSString * const lasLocLonKey = @"last_location_longitude";
+static NSString * const lasLocLatKey = @"last_location_latitude";
+static NSString * const endTimKey = @"end_time";
+static NSString * const endLonKey = @"end_longitude";
+static NSString * const endLatKey = @"end_latitude";
+static NSString * const timeKey = @"time";
+static NSString * const mileageKey = @"mileage";
+static NSString * const maxSpeKey = @"max_speed";
+static NSString * const avgSpeKey = @"avg_speed";
+static NSString * const harAccCntKey = @"harsh_acce_count";
+static NSString * const harDecCntKey = @"harsh_dece_count";
+static NSString * const harTurCntKey = @"harsh_turn_count";
+static NSString * const eveDatLenKey = @"event_data_length";
+static NSString * const eveDatLisKey = @"event_data_list";
+static NSString * const typeKey = @"type";
+static NSString * const posStaKey = @"position_status";
+static NSString * const longitudeKey = @"longitude";
+static NSString * const latitudeKey = @"latitude";
+static NSString * const speedKey = @"speed";
+static NSString * const heightKey = @"height";
+static NSString * const directionKey = @"direction";
+
+const static NSString *APIKey = @"f16a5f985db0941cd7ed7b3995798ba0";
+
+static CGFloat const leftSidePadding = 5.0f;
+static CGFloat const zoomBtnSize = 26.0f;
+
+#endif /* MultiMap_pch */
