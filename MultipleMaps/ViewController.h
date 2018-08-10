@@ -1,14 +1,15 @@
 //
 //  ViewController.h
-//  MultipleMaps
+//  MultiMap
 //
-//  Created by dev on 2018/8/10.
+//  Created by dev on 2018/7/31.
 //  Copyright © 2018年 dev. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : BaseViewController
 
 
 @end
