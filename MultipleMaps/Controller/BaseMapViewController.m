@@ -78,8 +78,12 @@ typedef NS_ENUM(NSInteger, ZoomBtnType) {
 #pragma mark - Helpers
 
 - (void)configSubViews {
+    
     for (UIViewController *subVC in self.parentViewController.childViewControllers) {
-        if ([subVC isKindOfClass:[AMapRouteTrailViewController class]]) {
+        BOOL isAliMapType = [subVC isKindOfClass:[AMapRouteTrailViewController class]];
+        BOOL isBaiduMapType = [subVC isKindOfClass:[routeTrailViewController class]];
+        
+        if (isAliMapType || isBaiduMapType) {
             self.referMapVC = subVC;
             break;
         }

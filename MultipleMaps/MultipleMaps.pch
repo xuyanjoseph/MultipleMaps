@@ -1,13 +1,13 @@
 //
-//  MultiMap.pch
-//  MultiMap
+//  MultipleMaps.pch
+//  MultipleMaps
 //
-//  Created by dev on 2018/7/31.
+//  Created by dev on 2018/8/10.
 //  Copyright © 2018年 dev. All rights reserved.
 //
 
-#ifndef MultiMap_pch
-#define MultiMap_pch
+#ifndef MultipleMaps_pch
+#define MultipleMaps_pch
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
@@ -115,4 +115,4 @@ const static NSString *APIKey = @"f16a5f985db0941cd7ed7b3995798ba0";
 static CGFloat const leftSidePadding = 5.0f;
 static CGFloat const zoomBtnSize = 26.0f;
 
-#endif /* MultiMap_pch */
+#endif /* MultipleMaps_pch */

@@ -76,6 +76,7 @@
     
     self.curTripData = [[TripCellData alloc] init];
     [self fetchLocalKey];
+    
 }
 
 #pragma mark - Network Request
@@ -93,6 +94,7 @@
             if (backCode == 0) {
                 NSDictionary *backData = data[@"data"];
                 // 保存数据在本地
+                
                 [[NSUserDefaults standardUserDefaults] setObject:backData[@"id"] forKey:locIdKey];
                 [[NSUserDefaults standardUserDefaults] setObject:backData[@"token"] forKey:locTokenKey];
                 [[NSUserDefaults standardUserDefaults] setObject:backData[@"phone_number"] forKey:locPhoneKey];

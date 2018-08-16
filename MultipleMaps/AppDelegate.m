@@ -8,9 +8,13 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import <BaiduMapAPI_Base/BMKBaseComponent.h>
 #import <AMapFoundationKit/AMapFoundationKit.h>
 
-@interface AppDelegate ()
+@interface AppDelegate ()<BMKGeneralDelegate>
+{
+    BMKMapManager *_mapManager;
+}
 
 @end
 
@@ -25,7 +29,8 @@
     
     self.window.rootViewController = rootNavCtl;
     
-    [self configureAPIKey];
+    [self configBaiduMapKey];
+    [self configAliMapKey];
     
     return YES;
 }
@@ -57,11 +62,26 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark - Baidu Map Config Methods
+
+- (void)configBaiduMapKey {
+    _mapManager = [[BMKMapManager alloc] init];
+    BOOL setKeyResult = [_mapManager
+                         start:@"3KMPKS8iTvjTPRpTzGLwGeTIZP26b5KV"
+                         generalDelegate:nil];
+    if (!setKeyResult) {
+        NSString *reason = [NSString stringWithFormat:@"百度地图apiKey为空，请检查key是否正确设置。"];
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:reason delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
+}
+
 #pragma mark - AMap Config Methods
 
-- (void)configureAPIKey {
+- (void)configAliMapKey {
     if (0 == [APIKey length]) {
-        NSString *reason = [NSString stringWithFormat:@"apiKey为空，请检查key是否正确设置。"];
+        NSString *reason = [NSString stringWithFormat:@"阿里地图apiKey为空，请检查key是否正确设置。"];
         
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:reason delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
