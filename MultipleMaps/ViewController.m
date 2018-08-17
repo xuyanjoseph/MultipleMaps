@@ -30,8 +30,8 @@
     
     NSLog(@"根视图控制器");
     
-    [self configData];
-    [self configSubViews];
+//    [self configData];
+//    [self configSubViews];
 }
 
 #pragma mark - Setters And Getters

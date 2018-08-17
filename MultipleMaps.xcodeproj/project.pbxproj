@@ -443,6 +443,9 @@
 		D75E7BB3211D85C500CE4AA5 /* MADriEvtAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D75E7A08211D85C400CE4AA5 /* MADriEvtAnnotation.m */; };
 		D75E7BB4211D85C500CE4AA5 /* RouteTrailData.m in Sources */ = {isa = PBXBuildFile; fileRef = D75E7A0A211D85C400CE4AA5 /* RouteTrailData.m */; };
 		D75E7BB5211D85C500CE4AA5 /* TripCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = D75E7A0C211D85C400CE4AA5 /* TripCellData.m */; };
+		D7C8BA4021252C31006D0183 /* VideoLaunchView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C8BA3F21252C31006D0183 /* VideoLaunchView.m */; };
+		D7C8BA4521257FB3006D0183 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C8BA4421257FB3006D0183 /* RootViewController.m */; };
+		D7C8BA4921258CEC006D0183 /* emoji_zone.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D7C8BA4821258CEC006D0183 /* emoji_zone.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -938,6 +941,11 @@
 		D75E7A0B211D85C400CE4AA5 /* TripCellData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripCellData.h; sourceTree = "<group>"; };
 		D75E7A0C211D85C400CE4AA5 /* TripCellData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripCellData.m; sourceTree = "<group>"; };
 		D75E7BB6211D86CC00CE4AA5 /* MultipleMaps.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultipleMaps.pch; sourceTree = "<group>"; };
+		D7C8BA3E21252C31006D0183 /* VideoLaunchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoLaunchView.h; sourceTree = "<group>"; };
+		D7C8BA3F21252C31006D0183 /* VideoLaunchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoLaunchView.m; sourceTree = "<group>"; };
+		D7C8BA4321257FB3006D0183 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		D7C8BA4421257FB3006D0183 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		D7C8BA4821258CEC006D0183 /* emoji_zone.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = emoji_zone.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1021,6 +1029,7 @@
 		D75E7800211D702A00CE4AA5 /* MultipleMaps */ = {
 			isa = PBXGroup;
 			children = (
+				D7C8BA4821258CEC006D0183 /* emoji_zone.mp4 */,
 				D75E7845211D85C400CE4AA5 /* Controller */,
 				D75E7A06211D85C400CE4AA5 /* Model */,
 				D75E784E211D85C400CE4AA5 /* Tools */,
@@ -1060,6 +1069,7 @@
 		D75E7833211D85C300CE4AA5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D7C8BA3D21252B21006D0183 /* LaunchViews */,
 				D75E7834211D85C300CE4AA5 /* CustomAnnotationView.h */,
 				D75E7835211D85C300CE4AA5 /* CustomAnnotationView.m */,
 				D75E7836211D85C300CE4AA5 /* CustomCalloutView.h */,
@@ -1091,6 +1101,8 @@
 				D75E784B211D85C400CE4AA5 /* BaseViewController.m */,
 				D75E784C211D85C400CE4AA5 /* routeTrailViewController.h */,
 				D75E784D211D85C400CE4AA5 /* routeTrailViewController.m */,
+				D7C8BA4321257FB3006D0183 /* RootViewController.h */,
+				D7C8BA4421257FB3006D0183 /* RootViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1653,6 +1665,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D7C8BA3D21252B21006D0183 /* LaunchViews */ = {
+			isa = PBXGroup;
+			children = (
+				D7C8BA3E21252C31006D0183 /* VideoLaunchView.h */,
+				D7C8BA3F21252C31006D0183 /* VideoLaunchView.m */,
+			);
+			path = LaunchViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1965,6 +1986,7 @@
 				D75E7ADE211D85C500CE4AA5 /* 13_6740_3107.png in Resources */,
 				D75E7A2F211D85C500CE4AA5 /* custtexture.png in Resources */,
 				D75E7B75211D85C500CE4AA5 /* 13_6750_3098.png in Resources */,
+				D7C8BA4921258CEC006D0183 /* emoji_zone.mp4 in Resources */,
 				D75E7B30211D85C500CE4AA5 /* 13_6746_3093.png in Resources */,
 				D75E7A54211D85C500CE4AA5 /* 12_3368_1551.png in Resources */,
 				D75E7AED211D85C500CE4AA5 /* 13_6741_3106.png in Resources */,
@@ -2182,6 +2204,7 @@
 				D75E7A14211D85C500CE4AA5 /* XLCircleProgress.m in Sources */,
 				D75E7811211D702A00CE4AA5 /* main.m in Sources */,
 				D75E7A17211D85C500CE4AA5 /* BaseViewController.m in Sources */,
+				D7C8BA4521257FB3006D0183 /* RootViewController.m in Sources */,
 				D75E7BB3211D85C500CE4AA5 /* MADriEvtAnnotation.m in Sources */,
 				D75E7A19211D85C500CE4AA5 /* AFHTTPSessionManager.m in Sources */,
 				D75E7A13211D85C500CE4AA5 /* XLCircle.m in Sources */,
@@ -2192,6 +2215,7 @@
 				D75E7A1B211D85C500CE4AA5 /* AFSecurityPolicy.m in Sources */,
 				D75E7A15211D85C500CE4AA5 /* AMapRouteTrailViewController.m in Sources */,
 				D75E7BAD211D85C500CE4AA5 /* UIImage+Rotate.m in Sources */,
+				D7C8BA4021252C31006D0183 /* VideoLaunchView.m in Sources */,
 				D75E7A1C211D85C500CE4AA5 /* AFURLRequestSerialization.m in Sources */,
 				D75E7A1A211D85C500CE4AA5 /* AFNetworkReachabilityManager.m in Sources */,
 				D75E7A1D211D85C500CE4AA5 /* AFURLResponseSerialization.m in Sources */,

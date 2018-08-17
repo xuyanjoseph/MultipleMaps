@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "VideoLaunchView.h"
+#import "RootViewController.h"
 #import <BaiduMapAPI_Base/BMKBaseComponent.h>
 #import <AMapFoundationKit/AMapFoundationKit.h>
 
@@ -16,18 +18,38 @@
     BMKMapManager *_mapManager;
 }
 
+@property (nonatomic, strong) VideoLaunchView *vidLaunchV;
+
 @end
 
 @implementation AppDelegate
 
++ (instancetype)sharedInstance {
+    static AppDelegate *appDelegateObj;
+    static dispatch_once_t appDelToken;
+    dispatch_once(&appDelToken, ^{
+        appDelegateObj = [[AppDelegate alloc] init];
+    });
+    
+    return appDelegateObj;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    ViewController *rootVC = [[ViewController alloc] init];
-    UINavigationController *rootNavCtl = [[UINavigationController alloc] initWithRootViewController:rootVC];
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor clearColor];
     
+//        ViewController *rootVC = [[ViewController alloc] init];
+//        UINavigationController *rootNavCtl = [[UINavigationController alloc] initWithRootViewController:rootVC];
+    
+    RootViewController *rootVC = [[RootViewController alloc] init];
+    UINavigationController *rootNavCtl = [[UINavigationController alloc] initWithRootViewController:rootVC];
     self.window.rootViewController = rootNavCtl;
+    [self.window makeKeyAndVisible];
+    
+    [self.window addSubview:self.vidLaunchV];
+    [self.window bringSubviewToFront:self.vidLaunchV];
     
     [self configBaiduMapKey];
     [self configAliMapKey];
@@ -50,6 +72,10 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    
+//    if (self.vidLaunchV) {
+//        [self.vidLaunchV startToPlay];
+//    }
 }
 
 
@@ -89,4 +115,14 @@
     
     [AMapServices sharedServices].apiKey = (NSString *)APIKey;
 }
+
+- (VideoLaunchView *)vidLaunchV {
+    if (!_vidLaunchV) {
+        NSString *videoFilePath = [[NSBundle mainBundle] pathForResource:@"emoji_zone" ofType:@"mp4"];
+        NSURL *videoUrl = [NSURL fileURLWithPath:videoFilePath];
+        _vidLaunchV = [[VideoLaunchView alloc] initWithVideoURL:videoUrl andVolume:0.7 andFrame:[UIScreen mainScreen].bounds];
+    }
+    return _vidLaunchV;
+}
+
 @end
