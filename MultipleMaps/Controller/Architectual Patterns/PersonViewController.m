@@ -1,24 +1,22 @@
 //
-//  RootViewController.m
+//  PersonViewController.m
 //  MultipleMaps
 //
-//  Created by dev on 2018/8/16.
+//  Created by dev on 2018/8/17.
 //  Copyright © 2018年 dev. All rights reserved.
 //
 
-#import "RootViewController.h"
+#import "PersonViewController.h"
 
-@interface RootViewController ()
+@interface PersonViewController ()
 
 @end
 
-@implementation RootViewController
+@implementation PersonViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    self.view.backgroundColor = [UIColor clearColor];
 }
 
 - (void)didReceiveMemoryWarning {

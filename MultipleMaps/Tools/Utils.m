@@ -153,4 +153,14 @@
                            alpha:1.0f];
 }
 
++ (UILabel *)configNavBarTitle:(NSString *)title {
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 44)];
+    label.backgroundColor = [UIColor clearColor];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.text = title;
+    label.font = [UIFont boldSystemFontOfSize:17];
+    label.textColor = [UIColor blackColor];
+    //    self.navigationItem.titleView = label;
+    return label;
+}
 @end

@@ -17,6 +17,7 @@
 
 @property (nonatomic, strong) UIButton *baiduBtn;
 @property (nonatomic, strong) UIButton *aliBtn;
+@property (nonatomic, strong) UIButton *mvvmBtn;
 
 @property (nonatomic, strong) TripCellData *curTripData;
 
@@ -29,9 +30,9 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     NSLog(@"根视图控制器");
-    
-//    [self configData];
-//    [self configSubViews];
+    self.view.backgroundColor = [UIColor yellowColor];
+    [self configData];
+    [self configSubViews];
 }
 
 #pragma mark - Setters And Getters
@@ -62,12 +63,26 @@
     return _aliBtn;
 }
 
+- (UIButton *)mvvmBtn {
+    if (!_mvvmBtn) {
+        _mvvmBtn = [[UIButton alloc] initWithFrame:CGRectMake(10, 300, 100, 60)];
+//        _mvvmBtn.tag = 2;
+        [_mvvmBtn setTitle:@"MVVM入口" forState:UIControlStateNormal];
+        _mvvmBtn.titleLabel.font = [UIFont systemFontOfSize:17];
+        [_mvvmBtn setTitleColor:[UIColor whiteColor]  forState:UIControlStateNormal];
+        _mvvmBtn.backgroundColor = [UIColor blueColor];
+        [_mvvmBtn addTarget:self action:@selector(enterMVVMPattern:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _mvvmBtn;
+}
+
 #pragma mark - UI Layout
 
 - (void)configSubViews {
     self.view.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:self.baiduBtn];
     [self.view addSubview:self.aliBtn];
+    [self.view addSubview:self.mvvmBtn];
 }
 
 #pragma mark - Initialize Data
@@ -162,6 +177,10 @@
         default:
             break;
     }
+}
+
+- (void)enterMVVMPattern:(UIButton *)sender {
+    
 }
 
 - (void)didReceiveMemoryWarning {

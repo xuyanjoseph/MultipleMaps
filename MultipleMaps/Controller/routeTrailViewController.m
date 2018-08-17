@@ -14,9 +14,7 @@
 #import "DriveEventsView.h"
 #import "XLCircleProgress.h"
 #import "UIColor+HEX.h"
-//#import "BackBtnStatus.h"
-//#import "GeneralMethods.h"
-//#import "Utils.h"
+#import "Utils.h"
 
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
 #import <BaiduMapAPI_Location/BMKLocationComponent.h>
@@ -61,7 +59,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

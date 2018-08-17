@@ -28,5 +28,6 @@
 //标准时间格式2016-03-16 14:21:45转毫秒时间戳1458109305000以NSNumber形式返回
 + (NSNumber *)getMilliTimStaNumFromTimeString:(NSString *)timeStr;
 
++ (UILabel *)configNavBarTitle:(NSString *)title;
 
 @end

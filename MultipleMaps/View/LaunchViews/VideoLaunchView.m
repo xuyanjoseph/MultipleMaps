@@ -68,16 +68,19 @@
 //        [_skipBtn setBackgroundImage:[UIImage imageNamed:@"btn-login-1"] forState:UIControlStateDisabled];
 //        [_skipBtn setBackgroundImage:[UIImage imageNamed:@"btn-login-2"] forState:UIControlStateNormal];
 //        [_skipBtn setBackgroundImage:[UIImage imageNamed:@"btn-login-3"] forState:UIControlStateHighlighted];
+        
         [_skipBtn addTarget:self action:@selector(skip:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _skipBtn;
 }
 
 - (void)skip:(UIButton *)sender {
-    UINavigationController *rootNavCtl = (UINavigationController *)[AppDelegate sharedInstance].window.rootViewController;
     
-    ViewController *defVC = [[ViewController alloc] init];
-    [rootNavCtl pushViewController:defVC animated:YES];
+    if (self.avplayer) {
+        [self.avplayer pause];
+    }
+    
+    [self removeFromSuperview];
 }
 
 @end

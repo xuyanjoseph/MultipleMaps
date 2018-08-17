@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "VideoLaunchView.h"
-#import "RootViewController.h"
+#import "BaseNavController.h"
 #import <BaiduMapAPI_Base/BMKBaseComponent.h>
 #import <AMapFoundationKit/AMapFoundationKit.h>
 
@@ -37,20 +37,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.backgroundColor = [UIColor clearColor];
-    
-//        ViewController *rootVC = [[ViewController alloc] init];
-//        UINavigationController *rootNavCtl = [[UINavigationController alloc] initWithRootViewController:rootVC];
-    
-    RootViewController *rootVC = [[RootViewController alloc] init];
-    UINavigationController *rootNavCtl = [[UINavigationController alloc] initWithRootViewController:rootVC];
-    self.window.rootViewController = rootNavCtl;
-    [self.window makeKeyAndVisible];
-    
-    [self.window addSubview:self.vidLaunchV];
-    [self.window bringSubviewToFront:self.vidLaunchV];
-    
+    [self configWindow];
     [self configBaiduMapKey];
     [self configAliMapKey];
     
@@ -73,9 +60,6 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
     
-//    if (self.vidLaunchV) {
-//        [self.vidLaunchV startToPlay];
-//    }
 }
 
 
@@ -114,6 +98,19 @@
     }
     
     [AMapServices sharedServices].apiKey = (NSString *)APIKey;
+}
+
+- (void)configWindow {
+        _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        _window.backgroundColor = [UIColor clearColor];
+        
+        ViewController *rootVC = [[ViewController alloc] init];
+        BaseNavController *rootNavCtl = [[BaseNavController alloc] initWithRootViewController:rootVC];
+        _window.rootViewController = rootNavCtl;
+        [_window makeKeyAndVisible];
+        
+        [_window addSubview:self.vidLaunchV];
+        [_window bringSubviewToFront:self.vidLaunchV];
 }
 
 - (VideoLaunchView *)vidLaunchV {

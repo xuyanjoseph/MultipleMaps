@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D70CD64521267017008F4739 /* BaseNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = D70CD64421267017008F4739 /* BaseNavController.m */; };
+		D70CD64D2126D806008F4739 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = D70CD64C2126D806008F4739 /* Person.m */; };
+		D70CD6502126D823008F4739 /* PersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D70CD64F2126D823008F4739 /* PersonModel.m */; };
+		D70CD6552126E4F2008F4739 /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D70CD6542126E4F2008F4739 /* PersonViewController.m */; };
 		D7190E7D212404690050AA44 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D7190E7C212404690050AA44 /* libsqlite3.0.tbd */; };
 		D7190E7F212405550050AA44 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7190E7E212405550050AA44 /* CoreTelephony.framework */; };
 		D7190E8221241EEE0050AA44 /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D7190E8121241EEE0050AA44 /* mapapi.bundle */; };
@@ -444,7 +448,6 @@
 		D75E7BB4211D85C500CE4AA5 /* RouteTrailData.m in Sources */ = {isa = PBXBuildFile; fileRef = D75E7A0A211D85C400CE4AA5 /* RouteTrailData.m */; };
 		D75E7BB5211D85C500CE4AA5 /* TripCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = D75E7A0C211D85C400CE4AA5 /* TripCellData.m */; };
 		D7C8BA4021252C31006D0183 /* VideoLaunchView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C8BA3F21252C31006D0183 /* VideoLaunchView.m */; };
-		D7C8BA4521257FB3006D0183 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C8BA4421257FB3006D0183 /* RootViewController.m */; };
 		D7C8BA4921258CEC006D0183 /* emoji_zone.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D7C8BA4821258CEC006D0183 /* emoji_zone.mp4 */; };
 /* End PBXBuildFile section */
 
@@ -466,6 +469,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D70CD64321267016008F4739 /* BaseNavController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavController.h; sourceTree = "<group>"; };
+		D70CD64421267017008F4739 /* BaseNavController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavController.m; sourceTree = "<group>"; };
+		D70CD64B2126D806008F4739 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		D70CD64C2126D806008F4739 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		D70CD64E2126D823008F4739 /* PersonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonModel.h; sourceTree = "<group>"; };
+		D70CD64F2126D823008F4739 /* PersonModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonModel.m; sourceTree = "<group>"; };
+		D70CD6532126E4F2008F4739 /* PersonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonViewController.h; sourceTree = "<group>"; };
+		D70CD6542126E4F2008F4739 /* PersonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonViewController.m; sourceTree = "<group>"; };
 		D7190E7C212404690050AA44 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		D7190E7E212405550050AA44 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		D7190E8121241EEE0050AA44 /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = mapapi.bundle; sourceTree = "<group>"; };
@@ -943,8 +954,6 @@
 		D75E7BB6211D86CC00CE4AA5 /* MultipleMaps.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultipleMaps.pch; sourceTree = "<group>"; };
 		D7C8BA3E21252C31006D0183 /* VideoLaunchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoLaunchView.h; sourceTree = "<group>"; };
 		D7C8BA3F21252C31006D0183 /* VideoLaunchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoLaunchView.m; sourceTree = "<group>"; };
-		D7C8BA4321257FB3006D0183 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		D7C8BA4421257FB3006D0183 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		D7C8BA4821258CEC006D0183 /* emoji_zone.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = emoji_zone.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -988,6 +997,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D70CD64221266DCA008F4739 /* ParentController */ = {
+			isa = PBXGroup;
+			children = (
+				D75E7804211D702A00CE4AA5 /* ViewController.h */,
+				D75E7805211D702A00CE4AA5 /* ViewController.m */,
+				D70CD64321267016008F4739 /* BaseNavController.h */,
+				D70CD64421267017008F4739 /* BaseNavController.m */,
+			);
+			path = ParentController;
+			sourceTree = "<group>";
+		};
+		D70CD64A2126D762008F4739 /* Architectual Pattern Models */ = {
+			isa = PBXGroup;
+			children = (
+				D70CD64B2126D806008F4739 /* Person.h */,
+				D70CD64C2126D806008F4739 /* Person.m */,
+				D70CD64E2126D823008F4739 /* PersonModel.h */,
+				D70CD64F2126D823008F4739 /* PersonModel.m */,
+			);
+			path = "Architectual Pattern Models";
+			sourceTree = "<group>";
+		};
+		D70CD6522126E4D1008F4739 /* Architectual Patterns */ = {
+			isa = PBXGroup;
+			children = (
+				D70CD6532126E4F2008F4739 /* PersonViewController.h */,
+				D70CD6542126E4F2008F4739 /* PersonViewController.m */,
+			);
+			path = "Architectual Patterns";
+			sourceTree = "<group>";
+		};
 		D7190E7B212404680050AA44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1036,8 +1076,6 @@
 				D75E7833211D85C300CE4AA5 /* View */,
 				D75E7801211D702A00CE4AA5 /* AppDelegate.h */,
 				D75E7802211D702A00CE4AA5 /* AppDelegate.m */,
-				D75E7804211D702A00CE4AA5 /* ViewController.h */,
-				D75E7805211D702A00CE4AA5 /* ViewController.m */,
 				D75E7807211D702A00CE4AA5 /* Main.storyboard */,
 				D75E780A211D702A00CE4AA5 /* Assets.xcassets */,
 				D75E780C211D702A00CE4AA5 /* LaunchScreen.storyboard */,
@@ -1093,6 +1131,8 @@
 		D75E7845211D85C400CE4AA5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D70CD6522126E4D1008F4739 /* Architectual Patterns */,
+				D70CD64221266DCA008F4739 /* ParentController */,
 				D75E7846211D85C400CE4AA5 /* AMapRouteTrailViewController.h */,
 				D75E7847211D85C400CE4AA5 /* AMapRouteTrailViewController.m */,
 				D75E7848211D85C400CE4AA5 /* BaseMapViewController.h */,
@@ -1101,8 +1141,6 @@
 				D75E784B211D85C400CE4AA5 /* BaseViewController.m */,
 				D75E784C211D85C400CE4AA5 /* routeTrailViewController.h */,
 				D75E784D211D85C400CE4AA5 /* routeTrailViewController.m */,
-				D7C8BA4321257FB3006D0183 /* RootViewController.h */,
-				D7C8BA4421257FB3006D0183 /* RootViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1655,6 +1693,7 @@
 		D75E7A06211D85C400CE4AA5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D70CD64A2126D762008F4739 /* Architectual Pattern Models */,
 				D75E7A07211D85C400CE4AA5 /* MADriEvtAnnotation.h */,
 				D75E7A08211D85C400CE4AA5 /* MADriEvtAnnotation.m */,
 				D75E7A09211D85C400CE4AA5 /* RouteTrailData.h */,
@@ -2198,15 +2237,16 @@
 				D75E7806211D702A00CE4AA5 /* ViewController.m in Sources */,
 				D75E7A0E211D85C500CE4AA5 /* CustomCalloutView.m in Sources */,
 				D75E7BAF211D85C500CE4AA5 /* GeneralMethods.m in Sources */,
+				D70CD64D2126D806008F4739 /* Person.m in Sources */,
 				D75E7BA1211D85C500CE4AA5 /* BackBtnStatus.m in Sources */,
 				D75E7A1E211D85C500CE4AA5 /* AFURLSessionManager.m in Sources */,
 				D75E7A18211D85C500CE4AA5 /* routeTrailViewController.m in Sources */,
 				D75E7A14211D85C500CE4AA5 /* XLCircleProgress.m in Sources */,
 				D75E7811211D702A00CE4AA5 /* main.m in Sources */,
 				D75E7A17211D85C500CE4AA5 /* BaseViewController.m in Sources */,
-				D7C8BA4521257FB3006D0183 /* RootViewController.m in Sources */,
 				D75E7BB3211D85C500CE4AA5 /* MADriEvtAnnotation.m in Sources */,
 				D75E7A19211D85C500CE4AA5 /* AFHTTPSessionManager.m in Sources */,
+				D70CD6552126E4F2008F4739 /* PersonViewController.m in Sources */,
 				D75E7A13211D85C500CE4AA5 /* XLCircle.m in Sources */,
 				D75E7BB1211D85C500CE4AA5 /* NetworkTools.m in Sources */,
 				D75E7A0D211D85C500CE4AA5 /* CustomAnnotationView.m in Sources */,
@@ -2214,11 +2254,13 @@
 				D75E7BB0211D85C500CE4AA5 /* MBProgressHUD.m in Sources */,
 				D75E7A1B211D85C500CE4AA5 /* AFSecurityPolicy.m in Sources */,
 				D75E7A15211D85C500CE4AA5 /* AMapRouteTrailViewController.m in Sources */,
+				D70CD6502126D823008F4739 /* PersonModel.m in Sources */,
 				D75E7BAD211D85C500CE4AA5 /* UIImage+Rotate.m in Sources */,
 				D7C8BA4021252C31006D0183 /* VideoLaunchView.m in Sources */,
 				D75E7A1C211D85C500CE4AA5 /* AFURLRequestSerialization.m in Sources */,
 				D75E7A1A211D85C500CE4AA5 /* AFNetworkReachabilityManager.m in Sources */,
 				D75E7A1D211D85C500CE4AA5 /* AFURLResponseSerialization.m in Sources */,
+				D70CD64521267017008F4739 /* BaseNavController.m in Sources */,
 				D75E7A11211D85C500CE4AA5 /* RouteAnnotation.mm in Sources */,
 				D75E7A0F211D85C500CE4AA5 /* DriveEventsView.m in Sources */,
 				D75E7A12211D85C500CE4AA5 /* UIView+PPBadgeView.m in Sources */,
